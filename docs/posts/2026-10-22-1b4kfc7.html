@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent 安全开始拆成三件事：隔离、拴绳、污点追踪 · AI 趋势归档</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <p class="site-title"><a href="../index.html">AI 趋势归档</a></p>
+  <nav class="site-nav"><a href="../index.html">全部文章</a></nav>
+</div></header>
+<main class="site-main">
+  <article>
+    <h1 class="post-title">Agent 安全开始拆成三件事：隔离、拴绳、污点追踪</h1>
+    <p class="post-meta">2026-10-22</p>
+    <div class="wechat-body">
+<section style="margin:0 auto;max-width:100%;padding:22px 18px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;color:#222222;background:#ffffff;line-height:1.9;">
+
+
+<section style="margin:42px 0;">
+<h3 style="margin:0 0 10px;color:#111111;font-size:22px;font-weight:800;line-height:1.45;">Agent 安全不再只靠提示词，三个项目分别卡住隔离、权限和污点</h3>
+<p style="margin:0 0 20px;color:#999999;font-size:13px;line-height:1.4;">10 月 22 日</p>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+安全厂商 Infisical 发了一篇博客，标题直接把 AI Agent 比作需要穿防化服处理的东西。它的判断很明确：Agent 的安全不该靠提示词约束，而该靠外部隔离，把风险限制在单一环节。隔离环境、可回收的权限、随时中断的能力，都要在 Agent 上线前设计好，不是出事再补。这个切入点的分量在于，它把问题从“让模型更听话”挪到了架构层面——Agent 会连续调工具、连续改真实系统，出错就不是输出一段错文本那么简单。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+代价是这篇博客目前只给出了判断，没有公开具体方案和代码细节。现在能从它身上拿到的，是一个论点，不是一个可以接进去的产品。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+GitHub 上的 security-sweep 来自 blencorp，主张给 AI agent“套上缰绳”，把它放进安全补丁流程里。项目标题里的“on a leash”说明重点不是更自动，而是先限住它能做什么。安全补丁这条链路涉及权限、代码改动和上线风险，agent 一旦放开手脚，代价比写错一段业务代码高得多，所以“限住”这个方向选得准。但原文没有展开实现方式，也没给适用场景和限制，现在判断不了它是完整工具、一份配置模板，还是一套流程约束。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+Cerbère 是三者里唯一直接对着数据流去的：它把自己定位成给 AI agent 做污点追踪，用来标记网页、文件、工具返回值这类外部内容，最终会流向哪次工具调用或哪段输出。这是 agent 连上外部内容之后最容易被忽略的一层——内容从哪来、被谁带进了哪次执行。原文没有说明支持哪些框架、用什么方式接入，也没有误报率和实际部署情况。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+三个项目各自只覆盖一小块：一个讲隔离，一个讲权限先限住，一个讲数据流标记，合起来也拼不成一套能直接选型的完整方案。这个判断的依据是三者都停留在项目页或博客层面，没有一个交出实现细节。
+</section>
+
+</section>
+
+<section style="margin:42px 0;height:1px;background:#eeeeee;font-size:0;line-height:0;">&nbsp;</section>
+
+
+<section style="margin:42px 0;">
+<h3 style="margin:0 0 10px;color:#111111;font-size:22px;font-weight:800;line-height:1.45;">三个项目都还没过社区验证，现在只能当选型检查表</h3>
+<p style="margin:0 0 20px;color:#999999;font-size:13px;line-height:1.4;">10 月 22 日</p>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+三条 Hacker News 帖子都是 2 分、0 条评论。这个数字本身说明不了技术好坏，但它意味着几乎没有人踩过、没有人反驳、也没有人贴出自己的使用结果。所以更诚实的读法是：今天看到的是三个方向声明，不是一个已经被验证的趋势。把它们写成行业转折，等于替营销稿扩音。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+不过方向本身值得记下来。三个项目恰好把 agent 进生产前最难绕的问题拆成了三块：能不能限住它能做什么，能不能追到外部数据进了哪次工具调用，出错时能不能停下来。这三件事都是架构问题，写多少句“请谨慎操作”的提示词都替代不了。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+所以真正能带走的不是项目名，而是三个问题，接任何 agent 之前都该问一遍：它的权限是否可以从外部回收；外部进来的数据能不能追踪到具体某次工具调用；出错时能不能中断或回滚。三个问题里有一个答不上来，换哪个项目都补不齐。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+后续的可验证变量很直接：这三个仓库会不会公开代码和接入方式，会不会有人在讨论区贴出真实部署反馈。在那之前，它们适合放在观察列表里，不适合出现在技术选型文档里。
+</section>
+
+</section>
+
+
+</section></div>
+  </article>
+</main>
+<footer class="site-footer"><div class="wrap">由 TrendPublish 生成</div></footer>
+</body>
+</html>
