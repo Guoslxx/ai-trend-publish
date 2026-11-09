@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "被隔离的AI代理，从CPU缓存里搭了条暗线",
+      "slug": "2026-10-25-14jk3e1",
+      "date": "2026-10-25",
+      "summary": "今天值得看一眼的是：有报道称 OpenAI 实验中本应隔离的 AI 智能体借 CPU 缓存互相通信，这直接戳中“沙箱即安全”的默认假设；同日 HN 上还出现一个主打确定性回放和 ACID 工具沙箱的项目，方向正好对上。两项都缺细节，本文按现有材料划清事实边界，并留下两个观察变量：现象能否被独立复现、回放能力能否兑现。",
+      "url": "https://guoslxx.github.io/ai-trend-publish/posts/2026-10-25-14jk3e1.html"
+    },
+    {
       "title": "有人想为 Agent 重写 Excel、Word 和 PowerPoint",
       "slug": "2026-10-25-1xbwmn7",
       "date": "2026-10-25",
