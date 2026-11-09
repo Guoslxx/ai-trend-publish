@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "特拉华想让 AI 当法人，同一天 Stripe 说 agent 能动钱",
+      "slug": "2026-11-06-148gj4a",
+      "date": "2026-11-06",
+      "summary": "特拉华州一项提案打算允许 AI 代理经营整个企业，Ars Technica 的标题直接写成“无人掌舵”；同一天 Stripe 博客说 agent 可以在 Stripe 里动钱，还有人搭了测试采购 agent 下单失败的沙盒。三条都只有标题级信息，但凑在一起说明竞争焦点正从模型能力移到授权链和责任归属。接下来要盯的是提案里有没有“人类兜底”条款，以及 Stripe 是否公布权限边界与回滚机制。",
+      "url": "https://guoslxx.github.io/ai-trend-publish/posts/2026-11-06-148gj4a.html"
+    },
+    {
       "title": "Stripe 说 AI 代理能動錢了，但額度、審批和追責都還沒寫",
       "slug": "2026-11-06-mn4qbc",
       "date": "2026-11-06",
