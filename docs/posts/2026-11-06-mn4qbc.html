@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stripe 说 AI 代理能動錢了，但額度、審批和追責都還沒寫 · AI 趋势归档</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <p class="site-title"><a href="../index.html">AI 趋势归档</a></p>
+  <nav class="site-nav"><a href="../index.html">全部文章</a></nav>
+</div></header>
+<main class="site-main">
+  <article>
+    <h1 class="post-title">Stripe 说 AI 代理能動錢了，但額度、審批和追責都還沒寫</h1>
+    <p class="post-meta">2026-11-06</p>
+    <div class="wechat-body">
+<section style="
+margin: 0 auto;
+max-width: 100%;
+padding: 18px 16px;
+font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+line-height: 1.75;
+color: #1d2129;
+background: #ffffff;
+">
+
+
+<section style="margin: 40px 0;">
+<section style="
+margin: 0 0 18px;
+padding: 16px 18px;
+background: linear-gradient(90deg, rgba(22,119,255,0.08), rgba(5,212,205,0.03));
+border-left: 4px solid #1677ff;
+border-radius: 12px;
+border-top: 1px solid rgba(22,119,255,0.10);
+border-right: 1px solid rgba(22,119,255,0.10);
+border-bottom: 1px solid rgba(5,212,205,0.10);
+">
+<h3 style="margin:0;color:#1d2129;font-size:22px;font-weight:800;line-height:1.45;">
+Stripe 说代理能动钱，但没说能动多少、谁来批
+</h3>
+<p style="margin:8px 0 0;color:#86909c;font-size:13px;line-height:1.4;">
+11 月 6 日
+</p>
+</section>
+<section style="padding:0 2px 0 4px;">
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+Stripe 的一篇博客，标题把话挑明了：AI agent 可以在 Stripe 里动钱。不是查账单、导报表那种外围动作，是发起涉及资金的操作。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+原文就停在这一句上。接口范围、单笔额度、审批流程、适用于哪类商户，一项都没写。所以现在能确认的只有一件事——Stripe 对外提出了这个能力；它到底开放到什么程度，是否已经对普通商户可用、有没有地区或账户类型限制，材料里都查不到。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+选它当今天的主线，不是因为讨论热，恰恰是因为冷：Hacker News 上这条只有 3 个点赞、2 条评论。这个数字说明不了产品好坏，只说明目前还没有第三方实测可供参照，读者看到的每一条描述都来自厂商自己。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+真正该盯的是四道关口：单笔额度给到多少、要不要二次确认、异常动作谁来拦、退款和错账算谁的责任。这四项里少写一项，把支付权限交给自动程序就等于在赌。能力名怎么写不重要，授权边界和责任归属才是判断这东西能不能用的分界线，而这两样今天都还没有。
+</section>
+
+</section>
+</section>
+
+<section style="margin:40px auto;width:70%;height:2px;background:linear-gradient(90deg, rgba(22,119,255,0), rgba(22,119,255,0.58), rgba(5,212,205,0.58), rgba(5,212,205,0));font-size:0;line-height:0;">&nbsp;</section>
+
+
+<section style="margin: 40px 0;">
+<section style="
+margin: 0 0 18px;
+padding: 16px 18px;
+background: linear-gradient(90deg, rgba(22,119,255,0.08), rgba(5,212,205,0.03));
+border-left: 4px solid #1677ff;
+border-radius: 12px;
+border-top: 1px solid rgba(22,119,255,0.10);
+border-right: 1px solid rgba(22,119,255,0.10);
+border-bottom: 1px solid rgba(5,212,205,0.10);
+">
+<h3 style="margin:0;color:#1d2129;font-size:22px;font-weight:800;line-height:1.45;">
+同一天出现的两种护栏：一个管授权，一个管运行环境
+</h3>
+<p style="margin:8px 0 0;color:#86909c;font-size:13px;line-height:1.4;">
+11 月 6 日
+</p>
+</section>
+<section style="padding:0 2px 0 4px;">
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+GitHub 上出现一个叫 Agentic Identity Broker 的项目，放在 Zalando 孵化器组织下，定位是给 AI 代理做 OAuth 委托。要解决的问题很具体：代理替用户访问第三方服务时，不必把用户凭据握在自己手里也能完成授权。Show HN 发布时是 17 分、3 条评论，仓库没有更细的功能说明。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+它补的是“凭据”这半边——代理不再直接拿着你的 token 到处跑。但授权委托做完，代理能花多少钱、能调哪个接口、越界了怎么停，仍然是另一套东西，这个项目没有回答。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+同一天还有一个 AegisKernel，自称给 AI 智能体用的零信任 POSIX 运行时，思路是把智能体的运行环境和常规 POSIX 接口隔开，在尽量不牺牲速度的前提下加约束。作者给出的延迟是低于 0.016 毫秒——自报数字，没有第三方测试，也没有代码审计，发布帖 7 分、0 条评论。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+把三条放在一起看，能看出一个时间上的巧合：能力开放和护栏工具是同时冒出来的，不是先有成熟规则再开放权限。这也意味着两边都还在入口处——一个只有标题级承诺，两个只有仓库级说明。你手上如果正打算把支付或系统权限交给脚本，现在能做的是照着上面那四道关口和“凭据是否外借”去问供应商，而不是从这三个名字里挑一个直接接。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+可验证的变量很明确：Stripe 那篇博客之后补不补额度、审批和责任条款，这两个仓库放不放得出接口文档和可复现的基准。任一条落地，今天这个“都还没写清”的判断就该改。
+</section>
+
+</section>
+</section>
+
+
+</section></div>
+  </article>
+</main>
+<footer class="site-footer"><div class="wrap">由 TrendPublish 生成</div></footer>
+</body>
+</html>
