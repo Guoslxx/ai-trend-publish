@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>别急着把密码交给 AI 代理：Uber 的部署经验和一条安全批评指向同一件事 · AI 趋势归档</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <p class="site-title"><a href="../index.html">AI 趋势归档</a></p>
+  <nav class="site-nav"><a href="../index.html">全部文章</a></nav>
+</div></header>
+<main class="site-main">
+  <article>
+    <h1 class="post-title">别急着把密码交给 AI 代理：Uber 的部署经验和一条安全批评指向同一件事</h1>
+    <p class="post-meta">2026-11-07</p>
+    <div class="wechat-body">
+<section style="
+margin: 0 auto;
+max-width: 100%;
+padding: 18px 16px;
+font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+line-height: 1.75;
+color: #1d2129;
+background: #ffffff;
+">
+
+
+<section style="margin: 40px 0;">
+<section style="
+margin: 0 0 18px;
+padding: 16px 18px;
+background: linear-gradient(90deg, rgba(22,119,255,0.08), rgba(5,212,205,0.03));
+border-left: 4px solid #1677ff;
+border-radius: 12px;
+border-top: 1px solid rgba(22,119,255,0.10);
+border-right: 1px solid rgba(22,119,255,0.10);
+border-bottom: 1px solid rgba(5,212,205,0.10);
+">
+<h3 style="margin:0;color:#1d2129;font-size:22px;font-weight:800;line-height:1.45;">
+先看代理拿的是什么：临时授权，还是能反复用的密码
+</h3>
+<p style="margin:8px 0 0;color:#86909c;font-size:13px;line-height:1.4;">
+11 月 7 日
+</p>
+</section>
+<section style="padding:0 2px 0 4px;">
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+Uber 在自家技术博客发了一篇《Securing AI Agents at Uber: Lessons from Real-World Deployment》，把部署 AI 代理过程中的安全教训整理出来。目前能看到的只有标题、发布渠道和 Hacker News 上一条热度很低的讨论帖——文章具体写了哪些措施、覆盖哪些业务场景，得等原文。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+同一批消息里还有一句更直接的话：前 Meta 安全负责人把「给 AI 代理密码访问权限」称为「疯了」。这话出现在一条 4 分、暂无评论的 Hacker News 讨论帖里，没有交代完整发言场景，也没有更多技术细节；它是个人批评，不是行业结论。但它指向的做法很具体：把账号密码交给代理，让它代替人登录系统、执行任务。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+真正要掂量的差别在这里。代理和聊天机器人不同，它要调用工具、访问内部系统、替人执行动作，出错时影响的不只是一句回答。密码可以反复使用，代理一旦被诱导出错或出现漏洞，暴露的是整个账户；换成一次任务一份、用完即失效的临时授权，出问题的范围就收在那一次操作里。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+所以评估一个 AI 工具时，先问三件事比先问模型有多聪明更有用：这项授权能不能随时撤回；范围是不是只到这次任务真正需要的那几个系统；付款、改配置、发对外消息这类动作是否还留一道人工确认。对方要的是一个能长期复用的密码，那就先在测试账号或沙箱环境里跑。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+也要承认另一面：企业里大量系统至今就是账号密码登录，改成临时授权或统一身份接入往往要排期数月，对代理一律拒绝密码，很可能让业务直接落不了地。更现实的目标不是「绝不给密码」，而是最小权限、沙箱隔离、关键动作人工确认这几样同时到位，至少别让代理拿着一个能登进全部系统、还能长期用的凭据。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+接下来能验证的是两件事：Uber 那篇文章会不会给出权限隔离、人工确认这类可复用的具体做法，而不只是原则；以及那位前 Meta 安全负责人的完整发言和案例会不会补上。补不上，这句话就只是一句态度鲜明的提醒。
+</section>
+
+</section>
+</section>
+
+<section style="margin:40px auto;width:70%;height:2px;background:linear-gradient(90deg, rgba(22,119,255,0), rgba(22,119,255,0.58), rgba(5,212,205,0.58), rgba(5,212,205,0));font-size:0;line-height:0;">&nbsp;</section>
+
+
+<section style="margin: 40px 0;">
+<section style="
+margin: 0 0 18px;
+padding: 16px 18px;
+background: linear-gradient(90deg, rgba(22,119,255,0.08), rgba(5,212,205,0.03));
+border-left: 4px solid #1677ff;
+border-radius: 12px;
+border-top: 1px solid rgba(22,119,255,0.10);
+border-right: 1px solid rgba(22,119,255,0.10);
+border-bottom: 1px solid rgba(5,212,205,0.10);
+">
+<h3 style="margin:0;color:#1d2129;font-size:22px;font-weight:800;line-height:1.45;">
+DeepMind 的 RSA 消息先当观察点，不急着当结论
+</h3>
+<p style="margin:8px 0 0;color:#86909c;font-size:13px;line-height:1.4;">
+11 月 7 日
+</p>
+</section>
+<section style="padding:0 2px 0 4px;">
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+Hacker News 上一条指向 Twitter 的消息称，DeepMind 的 AI 智能体在旧版 1024 位 RSA 加密系统里找到两处弱点。消息流出的全部内容就是这一句结论。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+没有方法说明，没有实验条件和耗时、算力开销，因此现在没法判断这些弱点在实际部署中有多难被利用。影响范围也需要分清：1024 位 RSA 属于被弃用的旧配置，主流服务早已转向更长的密钥，这更可能先落在仍跑老系统的设备和历史数据上，而不是所有用 RSA 的地方。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+值得等的是技术细节：攻击需要什么前提，是否在真实环境中被复现，会不会波及更长密钥。这几点出来之前，「AI 智能体攻破加密」只能算一条待核实的观察，不能当结论引用。
+</section>
+
+</section>
+</section>
+
+
+</section></div>
+  </article>
+</main>
+<footer class="site-footer"><div class="wrap">由 TrendPublish 生成</div></footer>
+</body>
+</html>
