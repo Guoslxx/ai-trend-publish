@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent 写完代码之后：harness、执行治理和代码体检同时冒出来 · AI 趋势归档</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <p class="site-title"><a href="../index.html">AI 趋势归档</a></p>
+  <nav class="site-nav"><a href="../index.html">全部文章</a></nav>
+</div></header>
+<main class="site-main">
+  <article>
+    <h1 class="post-title">Agent 写完代码之后：harness、执行治理和代码体检同时冒出来</h1>
+    <p class="post-meta">2026-11-03</p>
+    <div class="wechat-body">
+<section style="margin:0 auto;max-width:100%;padding:22px 18px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;color:#222222;background:#ffffff;line-height:1.9;">
+
+
+<section style="margin:42px 0;">
+<h3 style="margin:0 0 10px;color:#111111;font-size:22px;font-weight:800;line-height:1.45;">agent 的护栏还没造好，但三个位置已经有人站上去了</h3>
+<p style="margin:0 0 20px;color:#999999;font-size:13px;line-height:1.4;">11 月 3 日</p>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+一篇讲 coding agent 的 harness engineering 文章被提交到 Hacker News，站内标题写的是“十种可套用到真实仓库的模式”，点进去原文链接的标题却是 9 条。同一个东西，两个数字，说明这稿至少改过一版，也说明它被搬运时没人核对。帖子 12 分、1 条评论，原文只露出标题。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+harness 在这里指的是包在模型外面、用工程代码搭起来的那一层：上下文怎么喂进去、agent 的动作能走到哪、结果由谁来验收。它处理的问题正好卡在“agent 改完能跑，但我还是不敢合并”这个位置上——不是模型写得对不对，而是写完之后谁签字。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+把今天出现的三条材料按各自自我定位摆开，会发现它们恰好站在三个不同位置：harness 那篇管输入和验收流程，CleanSlop 管产出之后的故障排查，Rigorix 管执行时的规则约束。这个分工是我从它们的标题和一句话定位拼出来的，不是作者们的共识，三份材料彼此没有引用关系。但这张图至少能回答一个常见困惑：约束该加在哪一层，取决于你怕的是什么——怕它乱改就加在输入侧，怕它做完没人管就加在验收侧，怕它跑起来出事就加在执行侧。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+CleanSlop 的定位只有一句：找出 AI 生成的 TypeScript/Node Web 应用里会崩的地方，落地页是 cleanslop.com。它在 HN 上 3 分、1 条评论，作者 anomit，讨论区没展开。查的是类型错误、依赖冲突、运行时崩溃还是构建失败，一句都没说。这个项目目前只能证明一件事：有人把“AI 写的代码跑不起来”当成了一个独立品类。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+Rigorix 自称是面向 AI agent 的开源执行治理引擎，域名 rigorix.eu，讨论页 0 条评论。它到底管策略校验、执行拦截还是事后审计，支持哪些 agent 运行时，许可证是什么，公开信息里都没有。“自称开源”和“已经能下载来用”是两件事，这里只能停在前面那句。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+所以这三条加起来，能支撑的结论很窄：coding agent 的瓶颈正在从“模型会不会写”移到“工程侧怎么管”，方向清楚，效果没人证。照着它们改造仓库流水线为时过早，更划算的做法是把 harness 那篇的问题清单先拿去问自己团队——上下文从哪来、agent 哪些动作要拦、合并前谁验收。反过来说也成立：这些事 CI、lint、权限系统本来就在做，新名词未必带来新能力，判断标准应该是它有没有替你挡住过一次具体的坏合并。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+接下来值得盯的不是谁又发了一个治理框架，而是这三类项目里任何一个第一次公开自己的失败案例或验收标准——列出 AI 生成代码的高频故障类型，或者写清一条拦截规则怎么误杀正常改动。谁先给出这个，谁才从标题变成工具。
+</section>
+
+</section>
+
+
+</section></div>
+  </article>
+</main>
+<footer class="site-footer"><div class="wrap">由 TrendPublish 生成</div></footer>
+</body>
+</html>
