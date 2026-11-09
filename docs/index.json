@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "Agent 安全开始拆成三件事：隔离、拴绳、污点追踪",
+      "slug": "2026-10-22-1b4kfc7",
+      "date": "2026-10-22",
+      "summary": "同一天三条 HN 低热度项目分别从隔离、权限约束和污点追踪切 agent 安全，正好对应 agent 进生产前的三个具体问题。对正在接 agent 的团队，这篇给出可检验的选型检查项，也明确说明这些项目还没有实现细节和社区验证；后续变量是它们会不会公开代码、接入方式和真实使用反馈。",
+      "url": "https://guoslxx.github.io/ai-trend-publish/posts/2026-10-22-1b4kfc7.html"
+    },
+    {
       "title": "Anthropic 把 Agent Skills 捐给基金会，技能包以后谁维护还没答案",
       "slug": "2026-10-22-1xohpbh",
       "date": "2026-10-22",
