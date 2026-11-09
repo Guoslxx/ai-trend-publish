@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "Anthropic 把 Agent Skills 捐给基金会，技能包以后谁维护还没答案",
+      "slug": "2026-10-22-1xohpbh",
+      "date": "2026-10-22",
+      "summary": "Anthropic 把 Agent Skills 交给 Agentic AI Foundation，是今天最明确的机构动作；同日的 Infisical 和 Security Sweep 则从隔离和权限约束谈代理安全。三件事都还缺细节，读者现在能确认的是“有人开始管技能包和护栏”，还没到能改用法的时候。后续看基金会是否公布接收清单、许可和维护规则，以及这些安全工具是否给出可操作的限制方式。",
+      "url": "https://guoslxx.github.io/ai-trend-publish/posts/2026-10-22-1xohpbh.html"
+    },
+    {
       "title": "【Epic喜加一】《Terraspace》免费领，先去库存里占个坑",
       "slug": "2026-10-22-1ycfpnl",
       "date": "2026-10-22",
