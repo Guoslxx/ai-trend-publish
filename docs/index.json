@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "Mistral 把托管智能体搬进 Studio，价格和限制都还没说",
+      "slug": "2026-11-05-15p4ife",
+      "date": "2026-11-05",
+      "summary": "Mistral 在 Studio 里加了托管智能体、工作流和应用，同一天 Hacker News 上还有 Rivet（把 Agent 跑在 S3 上）和 Magertron（做工具、API、模型的统一入口）。三条撞在同一方向，但都没公布价格、调用限制和正式开放时间，受影响的是正准备选型的开发团队；接下来要看谁会先补上计费和上线范围。",
+      "url": "https://guoslxx.github.io/ai-trend-publish/posts/2026-11-05-15p4ife.html"
+    },
+    {
       "title": "一名外包人员的 Claude 智能体，被指接进了五角大楼内网",
       "slug": "2026-11-04-b1dcru",
       "date": "2026-11-04",
