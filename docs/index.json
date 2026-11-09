@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "有人想为 Agent 重写 Excel、Word 和 PowerPoint",
+      "slug": "2026-10-25-1xbwmn7",
+      "date": "2026-10-25",
+      "summary": "Compound 提议为 Agent 重写 Excel、PowerPoint、Word，Zephium 开源人类与 Agent 共用浏览器，Jukebox-OS 想把重放和回滚搬到工具调用层。三条都还很早期，但共同把问题指向接口与权限边界；做 Agent 产品和工具接入的人可以用它们当观察清单，后续看 demo、权限隔离和复现。",
+      "url": "https://guoslxx.github.io/ai-trend-publish/posts/2026-10-25-1xbwmn7.html"
+    },
+    {
       "title": "AI 内容披露与授权同时起火：日本演员工会、独立开发者、Epic 各自出招",
       "slug": "2026-10-24-1y6wtu4",
       "date": "2026-10-24",
