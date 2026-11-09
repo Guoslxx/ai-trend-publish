@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "编译器拦错、CAD 文件上传、AI 给老鼠做手术：今天这几条消息先别当结论",
+      "slug": "2026-10-30-s6mbrd",
+      "date": "2026-10-30",
+      "summary": "AWS Hydro 把编码代理的错误校验放到编译器层，这个方向具体但材料只到标题级；同时 MecAgent 被指扫描上传 CAD 文件、推文称 AI 给老鼠做手术，都是单帖待核实。读者能快速分清哪些是方向信号、哪些不能当事实，后续看实现细节、公司回应和原始机构说明。",
+      "url": "https://guoslxx.github.io/ai-trend-publish/posts/2026-10-30-s6mbrd.html"
+    },
+    {
       "title": "Intel 把 Panther Lake 产能挪去数据中心，低价 PC 芯片还在缺货",
       "slug": "2026-10-30-1m3p1se",
       "date": "2026-10-30",
