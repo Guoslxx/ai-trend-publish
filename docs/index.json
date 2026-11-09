@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "Agent 写完代码之后：harness、执行治理和代码体检同时冒出来",
+      "slug": "2026-11-03-8ffyvx",
+      "date": "2026-11-03",
+      "summary": "一篇讲 coding agent“harness engineering”的文章被提交到 Hacker News，标题写的是“十种可套用到真实仓库的模式”，而原文链接里的标题是 9 条。数字对不上，但它指向的问题很具体：怎样让 AI 改代码在真实项目里稳定可复用。 这里说的 harness，指的是包在模型外面、由工程代码搭起来的一层，用来控制上下文如何输入、动作边界在哪里、结果由谁验收。文章想把这些做法整理成能直接搬进自己 repo 的...",
+      "url": "https://guoslxx.github.io/ai-trend-publish/posts/2026-11-03-8ffyvx.html"
+    },
+    {
       "title": "DoorDash 说外部 AI Agent 只下了几百单",
       "slug": "2026-11-02-tho5za",
       "date": "2026-11-02",
