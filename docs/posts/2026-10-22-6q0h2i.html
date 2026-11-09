@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>微软披露 Storm-0940 用 agentic AI 打供应链：攻击链条里多了一个自动化执行者 · AI 趋势归档</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <p class="site-title"><a href="../index.html">AI 趋势归档</a></p>
+  <nav class="site-nav"><a href="../index.html">全部文章</a></nav>
+</div></header>
+<main class="site-main">
+  <article>
+    <h1 class="post-title">微软披露 Storm-0940 用 agentic AI 打供应链：攻击链条里多了一个自动化执行者</h1>
+    <p class="post-meta">2026-10-22</p>
+    <div class="wechat-body">
+<section style="margin:0 auto;max-width:100%;padding:22px 18px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;color:#222222;background:#ffffff;line-height:1.9;">
+<section style="margin:0 0 34px;padding-bottom:18px;border-bottom:1px solid #eeeeee;">
+<p style="margin:0 0 8px;color:#999999;font-size:12px;font-weight:700;letter-spacing:0.12em;line-height:1.2;">MINIMAL READING</p>
+<p style="margin:0;color:#111111;font-size:24px;font-weight:800;line-height:1.35;">本期文章</p>
+</section>
+<section style="margin:0 0 34px;">
+
+<p style="margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid #f2f2f2;color:#222222;font-size:14px;font-weight:700;line-height:1.7;">
+<span style="display:inline-block;margin-right:10px;color:#999999;">01</span>微软给这起攻击编了号：Storm-0940 用 agentic AI 从 ConnectWise 供应链切进去
+</p>
+
+<p style="margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid #f2f2f2;color:#222222;font-size:14px;font-weight:700;line-height:1.7;">
+<span style="display:inline-block;margin-right:10px;color:#999999;">02</span>Amazon 不缺 GPU，缺的是电
+</p>
+
+<p style="margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid #f2f2f2;color:#222222;font-size:14px;font-weight:700;line-height:1.7;">
+<span style="display:inline-block;margin-right:10px;color:#999999;">03</span>三星 2027 年的数据中心内存，八成已被提前锁走
+</p>
+
+<p style="margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid #f2f2f2;color:#222222;font-size:14px;font-weight:700;line-height:1.7;">
+<span style="display:inline-block;margin-right:10px;color:#999999;">04</span>Claude Duet 只开到研究预览：agent 进专业产品，还差细节
+</p>
+
+</section>
+
+<section style="margin:42px 0;">
+<p style="margin:0 0 10px;color:#999999;font-size:12px;font-weight:700;letter-spacing:0.10em;">ARTICLE 01</p>
+<h3 style="margin:0 0 10px;color:#111111;font-size:22px;font-weight:800;line-height:1.45;">微软给这起攻击编了号：Storm-0940 用 agentic AI 从 ConnectWise 供应链切进去</h3>
+<p style="margin:0 0 20px;color:#999999;font-size:13px;line-height:1.4;">2026-10-21T19:21:41.000Z</p>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+微软安全博客记录了一起被命名为 Storm-0940 的攻击活动：攻击方在大规模行动中使用名为 ARTEX 的 agentic AI，主要入口选在 ConnectWise 相关的供应链环节，微软将其归为国家背景攻击。这是近期 AI 安全方向少数带厂商一手材料和具体活动编号的案例，不是二手转述的“AI 黑客来了”。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+关键变化在 AI 承担的角色。按微软的描述，ARTEX 不只被用于生成钓鱼文案或辅助写代码，它被用来支撑实际攻击流程。这意味着攻击链条里多了一个能自动执行环节的角色，人工介入的节点被推到更靠后的位置。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+入口选在 ConnectWise 不是随手挑的。这类工具被大量托管服务商使用，供应链一旦被借道，影响会顺着服务商传到下游客户；上游被借道，下游跟着受影响，影响范围不由被攻击的那家公司单独决定。安全团队现在能做的是检查两样东西：第三方工具被授予的权限边界，以及 agent 留下的行为日志。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+还有一个缺口：ARTEX 的能力边界、攻击规模的具体数字、受影响客户范围，微软原文都没有给出。这个缺口直接影响对严重程度的判断，现在只能确认攻击路径存在，无法量化它的覆盖面。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+把它放在最前面的理由很直接：今天其余几条都是二手报道或标题级信息，只有这一条同时具备厂商一手材料、明确的活动编号和可追踪的攻击路径。后续可验证的变量是 ConnectWise 生态里的企业会不会披露自查结果。如果下游没有出现连带事件，说明这条路径目前还停留在被记录、未被大规模复用的阶段；如果出现，agentic AI 进攻击链就不止是一个说法。
+</section>
+
+</section>
+
+<section style="margin:42px 0;height:1px;background:#eeeeee;font-size:0;line-height:0;">&nbsp;</section>
+
+
+<section style="margin:42px 0;">
+<p style="margin:0 0 10px;color:#999999;font-size:12px;font-weight:700;letter-spacing:0.10em;">ARTICLE 02</p>
+<h3 style="margin:0 0 10px;color:#111111;font-size:22px;font-weight:800;line-height:1.45;">Amazon 不缺 GPU，缺的是电</h3>
+<p style="margin:0 0 20px;color:#999999;font-size:13px;line-height:1.4;">Wed, 21 Oct 2026 15:09:46 +0000</p>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+PC Gamer 转述 Amazon 的表态，矛盾点很直接：手里的 Nvidia GPU 够用，但电力不足以支撑 AI 业务扩张，AI 扩张还把公司自由现金流拖成了负值。对正在扩 AI 集群的团队，这个信号的重量高于“缺卡”：瓶颈从 GPU 采购转向供电、并网和能耗成本之后，卡只是预算里的一项，电力容量和现金流会先卡住扩张节奏。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+报道里引用的那句“你把公司自由现金流做成了负的，恭喜”，说明这已经进入财务层面的约束，而不是单纯的技术问题。末尾还提到 RTX 5090 仍不见踪影，消费级显卡这边也给不出缓解，两头都紧。
+</section>
+
+</section>
+
+<section style="margin:42px 0;height:1px;background:#eeeeee;font-size:0;line-height:0;">&nbsp;</section>
+
+
+<section style="margin:42px 0;">
+<p style="margin:0 0 10px;color:#999999;font-size:12px;font-weight:700;letter-spacing:0.10em;">ARTICLE 03</p>
+<h3 style="margin:0 0 10px;color:#111111;font-size:22px;font-weight:800;line-height:1.45;">三星 2027 年的数据中心内存，八成已被提前锁走</h3>
+<p style="margin:0 0 20px;color:#999999;font-size:13px;line-height:1.4;">Wed, 21 Oct 2026 11:14:24 +0000</p>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+三星 2027 年的数据中心内存已有 80% 被提前预订，PC Gamer 据此判断内存价格还会迎来两位数涨幅，且继续上涨的可能性不小。这不是预测模型推出来的数字，是产能已经被锁单锁掉的比例。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+锁单节奏比涨幅更值得看：数据中心客户提前两年以上把大部分产能买走，消费级和中小企业的议价空间被进一步压缩，原文提到明年想以合理价格升级硬件也不乐观。对准备采购服务器、工作站或自组机器的团队，预算窗口正在收窄，按过去的价格假设做内存预算已经不安全。后续变量是涨价落到哪些具体型号，以及整机厂商会不会把成本转嫁给买家。
+</section>
+
+</section>
+
+<section style="margin:42px 0;height:1px;background:#eeeeee;font-size:0;line-height:0;">&nbsp;</section>
+
+
+<section style="margin:42px 0;">
+<p style="margin:0 0 10px;color:#999999;font-size:12px;font-weight:700;letter-spacing:0.10em;">ARTICLE 04</p>
+<h3 style="margin:0 0 10px;color:#111111;font-size:22px;font-weight:800;line-height:1.45;">Claude Duet 只开到研究预览：agent 进专业产品，还差细节</h3>
+<p style="margin:0 0 20px;color:#999999;font-size:13px;line-height:1.4;">2026-10-21T19:21:41.000Z</p>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+路透社报道 Anthropic 开放了 Claude Duet 的研究预览，定位是面向专业人群的 agent 应用。目前只有标题级信息，能力边界、价格、开放范围都没有，所以现在只能确认方向：agent 正在从演示走向产品化入口。在产品细节补齐之前，把它当成一次能力信号的发布，比当成一个可评估的产品更准确。
+</section>
+
+</section>
+
+
+</section></div>
+  </article>
+</main>
+<footer class="site-footer"><div class="wrap">由 TrendPublish 生成</div></footer>
+</body>
+</html>
