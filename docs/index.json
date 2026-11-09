@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "Uber 一个季度只完成 4 单 AI 代理叫车",
+      "slug": "2026-11-04-1hmhkfb",
+      "date": "2026-11-04",
+      "summary": "Uber 上季度只有 4 单由 AI 代理完成，这个反差数字把代理出行拉回真实订单量；同时 YC 的 Garry Tan 一年 token 账单最高 20 万美元，给出重度使用的成本参照。普通乘客和想用代理的团队可以借此判断：现在更该看试验数据，而不是把演示当普及。后续变量是 Uber 是否披露统计口径和更细数据。",
+      "url": "https://guoslxx.github.io/ai-trend-publish/posts/2026-11-04-1hmhkfb.html"
+    },
+    {
       "title": "Gartner：开源模型能接九成智能体工作，成本只有前沿模型的二十分之一",
       "slug": "2026-11-03-jzakmp",
       "date": "2026-11-03",
