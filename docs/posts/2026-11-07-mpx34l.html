@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uber 把 Agent 放进生产环境，先卡在密码和网络出口 · AI 趋势归档</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <p class="site-title"><a href="../index.html">AI 趋势归档</a></p>
+  <nav class="site-nav"><a href="../index.html">全部文章</a></nav>
+</div></header>
+<main class="site-main">
+  <article>
+    <h1 class="post-title">Uber 把 Agent 放进生产环境，先卡在密码和网络出口</h1>
+    <p class="post-meta">2026-11-07</p>
+    <div class="wechat-body">
+<section style="margin:0 auto;max-width:100%;padding:22px 18px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;color:#222222;background:#ffffff;line-height:1.9;">
+
+
+<section style="margin:42px 0;">
+<h3 style="margin:0 0 10px;color:#111111;font-size:22px;font-weight:800;line-height:1.45;">Uber 说自己在管 Agent 安全，但只给了一份问题清单</h3>
+<p style="margin:0 0 20px;color:#999999;font-size:13px;line-height:1.4;">11 月 7 日</p>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+Uber 在自家技术博客发布《Securing AI Agents: Lessons from Real-World Deployment》，主题不是 Agent 能做什么，而是把它放进真实业务环境之后，安全边界该怎么管。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+此前这类讨论多来自安全厂商的推演，真正有部署规模的公司自己写复盘，样本并不多，这也是这篇文章值得点开的原因。但原文只给出方向性的「真实部署经验」，具体模型、Agent 数量、拦截数据一概没有。照着做不成立，照着列风险点成立。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+把它当问题清单用，是这个阶段最合理的读法：一家真在跑 Agent 的公司，把哪些环节当成风险点、按什么顺序处理。顺序本身就是信息，至于每一环怎么实现，得回到原文自己判断。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+同一周另一条相关表态更直接。前 Meta 安全负责人把「给 AI Agent 密码访问权限」称为「疯了」。这句话没有配套的产品、部署方式或事故案例，只落在一句安全判断上，所以它只能算风险提示，不能当证据。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+但提示指向的问题很具体。Agent 一旦持有长期密码，权限范围、撤销机制和审计记录都会变得难管；产品若把「代登录」当卖点，企业采购多半第一个追问凭证怎么隔离。这也是为什么更现实的路径是用短期令牌、最小权限和可撤销授权替代直接交出密码——不是因为更优雅，而是因为出事时你得能收得回来。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+需要承认反方：如果 Agent 跑在强隔离沙箱里，或者平台自带身份系统、能开出细粒度授权，上面这些紧迫性会下降；在受控内网里给 Agent 一个密码，也可能有人觉得可接受。但即便平台把这些做成内置能力，企业仍要自己定义权限边界和审计责任——这部分没有厂商能替你签。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+这里有个可验证的变量：Uber 这篇文章在 Hacker News 上只有 2 分、0 条评论。「上线之后的安全」还没成为开发者社区的公共议题。等更多公司公开各自的部署细节，才谈得上横向比较；在那之前，任何把它当标准答案的引用都过头了。
+</section>
+
+</section>
+
+<section style="margin:42px 0;height:1px;background:#eeeeee;font-size:0;line-height:0;">&nbsp;</section>
+
+
+<section style="margin:42px 0;">
+<h3 style="margin:0 0 10px;color:#111111;font-size:22px;font-weight:800;line-height:1.45;">云端 Agent 从家庭 IP 出网，能参考的是拓扑不是方案</h3>
+<p style="margin:0 0 20px;color:#999999;font-size:13px;line-height:1.4;">11 月 7 日</p>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+rtrvr.ai 在一篇博客里给了一个做法：让云端 Agent 通过 Tailscale 隧道，从家庭网络的 IP 出网。它解决的不是模型会不会做事，而是请求从哪个地址出去。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+这个需求本身很硬。Agent 要访问的服务一旦对住宅 IP 更友好、对机房 IP 更警惕，出口就成了必须单独设计的一层，而不是顺手复用服务器网卡。把家里节点接进 Tailscale 当出口，是成本最低的一种验证方式。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+限制也直接：家庭节点是否常开、带宽够不够、Tailscale 侧权限怎么隔离，原文没有展开。这几项里任何一项没答案，它都停在实验阶段。想复用的团队先把它当网络拓扑参考，别当生产方案。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+它和凭据那件事是同一条线上的两端。凭证决定 Agent 能以谁的身份做事，出口决定这件事从哪张网发起、能不能被单独限流和断掉。两样都自己做主，撤销才有意义。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+这条讨论在 Hacker News 上只有 3 分、2 条评论。热度低不代表方向错，只说明现在公开的细节还太少，谁都没有足够材料判断它能不能撑住生产。
+</section>
+
+</section>
+
+
+</section></div>
+  </article>
+</main>
+<footer class="site-footer"><div class="wrap">由 TrendPublish 生成</div></footer>
+</body>
+</html>
