@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "Agent 安全开始分件：1Password 管凭证，Koala 隔离 VM，Vericto 拦 SQL",
+      "slug": "2026-10-23-pxdxwd",
+      "date": "2026-10-23",
+      "summary": "1Password 上线新产品线 1Password for Agents，官方博客以发布公告的形式放出，Hacker News 上已经出现讨论帖。这次换的是服务对象：过去密码管理器管的是人的账号，现在要管会自己调用工具、执行任务的 AI agent。 抓取到的原文只有发布信息和博客入口，权限模型、计费方式、支持哪些 agent 框架都没有展开。能确认的只有动作本身：<strong>1Password 把 agent 身份单独拉成一条产...",
+      "url": "https://guoslxx.github.io/ai-trend-publish/posts/2026-10-23-pxdxwd.html"
+    },
+    {
       "title": "Agent 安全开始拆成三件事：隔离、拴绳、污点追踪",
       "slug": "2026-10-22-1b4kfc7",
       "date": "2026-10-22",
