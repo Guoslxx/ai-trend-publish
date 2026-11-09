@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 代理要查生产数据，OIDC、扫描和测试工具先上了 · AI 趋势归档</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <p class="site-title"><a href="../index.html">AI 趋势归档</a></p>
+  <nav class="site-nav"><a href="../index.html">全部文章</a></nav>
+</div></header>
+<main class="site-main">
+  <article>
+    <h1 class="post-title">AI 代理要查生产数据，OIDC、扫描和测试工具先上了</h1>
+    <p class="post-meta">2026-10-27</p>
+    <div class="wechat-body">
+<section style="
+margin: 0 auto;
+max-width: 100%;
+padding: 18px 16px;
+font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+line-height: 1.75;
+color: #1d2129;
+background: #ffffff;
+">
+
+
+<section style="margin: 40px 0;">
+<section style="
+margin: 0 0 18px;
+padding: 16px 18px;
+background: linear-gradient(90deg, rgba(22,119,255,0.08), rgba(5,212,205,0.03));
+border-left: 4px solid #1677ff;
+border-radius: 12px;
+border-top: 1px solid rgba(22,119,255,0.10);
+border-right: 1px solid rgba(22,119,255,0.10);
+border-bottom: 1px solid rgba(5,212,205,0.10);
+">
+<h3 style="margin:0;color:#1d2129;font-size:22px;font-weight:800;line-height:1.45;">
+让代理查生产数据，但别把密钥交给它
+</h3>
+<p style="margin:8px 0 0;color:#86909c;font-size:13px;line-height:1.4;">
+10 月 27 日
+</p>
+</section>
+<section style="padding:0 2px 0 4px;">
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+让云端 AI 代理直接查询生产环境，但不把密钥交给它——Formal.ai 在博客里给出的办法是用 OIDC 做身份验证，替掉传统的 secret 管理。同一批消息里还有两条：CodeRabbit 上线了跨多个代码仓库深度扫描的安全代理，AgenticBench 用 9 项安全测试横向跑 25 款编程代理。它们被放进同一篇，是因为问的是同一件事：代理伸手碰真实代码和数据之后，凭证、扫描和边界检查怎么落地。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+先看 Formal.ai，是因为它动的位置最靠前。另外两个在检查代理写出来的东西，它改的是代理能不能拿到钥匙。密钥一旦写进配置文件或环境变量，泄露和轮换就都成了长期开销；把访问权限绑到身份上，长期凭证的暴露面有可能缩小——这是推断，不是博客给出的结论。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+博客只给了方向。查询范围有多宽、权限粒度多细、审计和最小权限怎么设、误操作怎么拦，原文都没有展开。这条帖在 Hacker News 上是 13 分、7 条评论，也不足以当外部验证。要判断这套做法能不能用，得看它是否公开一份可复用的权限模板，或者有人贴出实际的审计配置。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+CodeRabbit 的新功能叫 Security Agents，主打跨多个代码仓库的深度扫描。代码散在多个仓库的团队，安全审查能不能覆盖仓库之间的关联，比单仓库扫得准不准更实际，这次更新最直接的变化就是把范围从单仓库推到多仓库。但支持哪些语言、怎么接进现有流程、是否额外收费，原文都没说明；发帖时只有 2 分、1 条评论，功能实际效果、误报率和多仓库扫描的执行成本，都要等真正用过的团队给反馈。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+AgenticBench 想解决的问题更靠上游：这些能读代码、改文件、执行命令的代理，在安全边界上是否一致？项目用 9 项安全测试横向跑 25 款代理，页面已经上线，但目前公开的只有这两个数字，具体测了什么、逐项结果如何都没有给出，发帖时 2 分、0 条评论。拿它做选型依据，等于把一个还没结果的榜单当结论。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+三条消息缺的是同一类东西：能核对的细节。所以现在能做的不是挑工具，而是先列自己的清单——代理被允许读哪些表、写哪些分支、出错时谁来收尾。下一个能推翻上面判断的事实很具体：Formal.ai 若公开了权限粒度，或者 AgenticBench 放出了逐项结果，这套“只够看方向”的结论就得改。
+</section>
+
+</section>
+</section>
+
+
+</section></div>
+  </article>
+</main>
+<footer class="site-footer"><div class="wrap">由 TrendPublish 生成</div></footer>
+</body>
+</html>
