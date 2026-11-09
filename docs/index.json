@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "Uber 把 Agent 放进生产环境，先卡在密码和网络出口",
+      "slug": "2026-11-07-mpx34l",
+      "date": "2026-11-07",
+      "summary": "Uber 罕见公开 Agent 真实部署的安全复盘，虽然没给模型、数量和拦截数据，但把“上生产先管凭据和网络出口”摆到台面；前 Meta 安全负责人的反对和 Tailscale 家庭 IP 隧道示例让这个顺序更具体。正在自建 Agent 的团队可以拿它做上线前检查清单，后续要看 Uber 是否补细节、更多公司是否公开复盘。",
+      "url": "https://guoslxx.github.io/ai-trend-publish/posts/2026-11-07-mpx34l.html"
+    },
+    {
       "title": "别急着把密码交给 AI 代理：Uber 的部署经验和一条安全批评指向同一件事",
       "slug": "2026-11-07-hm90rz",
       "date": "2026-11-07",
