@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "Intel 把 Panther Lake 产能挪去数据中心，低价 PC 芯片还在缺货",
+      "slug": "2026-10-30-1m3p1se",
+      "date": "2026-10-30",
+      "summary": "10 月 30 日两条 PC Gamer 报道给出一个具体信号：Intel 把 Panther Lake 产能挪去数据中心，同时低价 Wildcat Lake 仍售罄；Altman 又公开说 DRAM 优先给个人电脑“不是好事”。对读者来说，新鲜点不是又一轮 AI 抢资源的口水，而是这次能落到排产、交期和装机成本上；后续变量是内存价格何时回落、Intel 何时把产能调回 PC 端。",
+      "url": "https://guoslxx.github.io/ai-trend-publish/posts/2026-10-30-1m3p1se.html"
+    },
+    {
       "title": "一家国防承包商把AI代理接进了五角大楼安全系统，关键信息没披露",
       "slug": "2026-10-29-1e5hee4",
       "date": "2026-10-29",
