@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>编译器拦错、CAD 文件上传、AI 给老鼠做手术：今天这几条消息先别当结论 · AI 趋势归档</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <p class="site-title"><a href="../index.html">AI 趋势归档</a></p>
+  <nav class="site-nav"><a href="../index.html">全部文章</a></nav>
+</div></header>
+<main class="site-main">
+  <article>
+    <h1 class="post-title">编译器拦错、CAD 文件上传、AI 给老鼠做手术：今天这几条消息先别当结论</h1>
+    <p class="post-meta">2026-10-30</p>
+    <div class="wechat-body">
+<section style="
+margin: 0 auto;
+max-width: 100%;
+padding: 18px 16px;
+font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+line-height: 1.75;
+color: #1d2129;
+background: #ffffff;
+">
+
+
+<section style="margin: 40px 0;">
+<section style="
+margin: 0 0 18px;
+padding: 16px 18px;
+background: linear-gradient(90deg, rgba(22,119,255,0.08), rgba(5,212,205,0.03));
+border-left: 4px solid #1677ff;
+border-radius: 12px;
+border-top: 1px solid rgba(22,119,255,0.10);
+border-right: 1px solid rgba(22,119,255,0.10);
+border-bottom: 1px solid rgba(5,212,205,0.10);
+">
+<h3 style="margin:0;color:#1d2129;font-size:22px;font-weight:800;line-height:1.45;">
+AWS Hydro 想让编译器接住编码代理写错的代码
+</h3>
+<p style="margin:8px 0 0;color:#86909c;font-size:13px;line-height:1.4;">
+10 月 30 日
+</p>
+</section>
+<section style="padding:0 2px 0 4px;">
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+AWS 的 Hydro 团队把力气花在编码智能体出错之后的一环：让编译器来发现这些错误，而不是指望智能体一次就把代码写对。目前能确认的只有这个方向本身——在编译器层面加一道检查。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+来源是一条 Hacker News 提交，指向 The New Stack 的报道。提交只有 2 分，暂无评论。这个分数不代表技术价值，但它和 The New Stack 那篇报道的信息量是对得上的：报的是方向，不是成品。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+对每天用 AI 补代码的人来说，实际变化是把校验责任从“我逐行看输出”往工具链上挪。要紧的不是它能不能查出错误——静态检查一直在查——而是编译器这道检查能不能真的接住代理的错误。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+也可能只是给既有的静态检查换了个说法，目前公开材料里看不到可部署工具的信息。我把它放在第一条，理由不是影响最大，而是它是今天唯一一条落在具体工程位置上的消息：位置清楚，里面还空着。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+缺的东西很具体：实现方式、发布时间、适用范围。任何一样先出来，这条消息才算有了可核对的骨架。
+</section>
+
+</section>
+</section>
+
+<section style="margin:40px auto;width:70%;height:2px;background:linear-gradient(90deg, rgba(22,119,255,0), rgba(22,119,255,0.58), rgba(5,212,205,0.58), rgba(5,212,205,0));font-size:0;line-height:0;">&nbsp;</section>
+
+
+<section style="margin: 40px 0;">
+<section style="
+margin: 0 0 18px;
+padding: 16px 18px;
+background: linear-gradient(90deg, rgba(22,119,255,0.08), rgba(5,212,205,0.03));
+border-left: 4px solid #1677ff;
+border-radius: 12px;
+border-top: 1px solid rgba(22,119,255,0.10);
+border-right: 1px solid rgba(22,119,255,0.10);
+border-bottom: 1px solid rgba(5,212,205,0.10);
+">
+<h3 style="margin:0;color:#1d2129;font-size:22px;font-weight:800;line-height:1.45;">
+MecAgent 被指扫描上传 CAD 文件，先弄清数据边界
+</h3>
+<p style="margin:8px 0 0;color:#86909c;font-size:13px;line-height:1.4;">
+10 月 30 日
+</p>
+</section>
+<section style="padding:0 2px 0 4px;">
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+有 SolidWorks 用户在 Reddit 发帖提醒：面向 SolidWorks 的 AI 工具 MecAgent 会扫描本地硬盘中的 CAD 文件，并把这些文件上传。原帖没有说明上传目的地、扫描的文件范围和授权流程，也没有 MecAgent 方面的回应。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+手里存着客户图纸、供应商零件或未公开设计文件的人，真正的问题不是“AI 会不会偷图”，而是试用这类工具时你根本不知道边界画在哪。帖子只有一方说法，但数据边界这件事不用等定论才值得先查：它读哪些目录、传哪些文件，是可以立刻问清楚的。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+另一条更短：一条推文称，昨晚有一个 AI 智能体为一只老鼠实施了手术。帖子没有地点、机构和参与人员，也没有老鼠的术后状态，转到 Hacker News 后只有 3 个点数、暂无评论。据此既不能判断 AI 已能独立完成动物手术，更谈不上往人体医疗上推。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+三条消息缺的东西各不相同：编译器那条等实现细节，MecAgent 那条等公司回应，手术那条等原始推文补出机构名称和手术类型。谁先补上，谁就从“某人说”变成可以引用的事实；补不上，就各自停在原地。
+</section>
+
+</section>
+</section>
+
+
+</section></div>
+  </article>
+</main>
+<footer class="site-footer"><div class="wrap">由 TrendPublish 生成</div></footer>
+</body>
+</html>
