@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>同一天出现三款 AI 代理护栏：管密码、隔离 VM、拦 SQL · AI 趋势归档</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <p class="site-title"><a href="../index.html">AI 趋势归档</a></p>
+  <nav class="site-nav"><a href="../index.html">全部文章</a></nav>
+</div></header>
+<main class="site-main">
+  <article>
+    <h1 class="post-title">同一天出现三款 AI 代理护栏：管密码、隔离 VM、拦 SQL</h1>
+    <p class="post-meta">2026-10-23</p>
+    <div class="wechat-body">
+<section style="
+margin: 0 auto;
+max-width: 100%;
+padding: 18px 16px;
+font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+line-height: 1.75;
+color: #1d2129;
+background: #ffffff;
+">
+
+
+<section style="margin: 40px 0;">
+<section style="
+margin: 0 0 18px;
+padding: 16px 18px;
+background: linear-gradient(90deg, rgba(22,119,255,0.08), rgba(5,212,205,0.03));
+border-left: 4px solid #1677ff;
+border-radius: 12px;
+border-top: 1px solid rgba(22,119,255,0.10);
+border-right: 1px solid rgba(22,119,255,0.10);
+border-bottom: 1px solid rgba(5,212,205,0.10);
+">
+<h3 style="margin:0;color:#1d2129;font-size:22px;font-weight:800;line-height:1.45;">
+代理动手前的三步：管密码、隔离运行环境、拦 SQL
+</h3>
+<p style="margin:8px 0 0;color:#86909c;font-size:13px;line-height:1.4;">
+10 月 23 日
+</p>
+</section>
+<section style="padding:0 2px 0 4px;">
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+1Password 的博客挂出一则公告，标题就叫“Introducing 1Password for Agents”，链接路径里还写着“for-ai-agents”。除此之外，功能清单、价格、上线时间，原文一样没给。能确认的只有产品名和方向：它想把 AI 代理放进密码管理的范围内。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+先写它，是因为代理要替人登录账号，凭据由谁保管、事后怎么把权限收回来，是它动手前绕不开的第一道门。公告没有说明这道门具体怎么设置。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+Koala 卡的是第二道：执行环境。开发者 Kunal Kushwaha 在 Show HN 发布，让 AI Agent 在 macOS 上通过隔离的 Linux 虚拟机运行，项目页是个 Homebrew 地址，安装路径明显面向 Mac 用户。macOS 当宿主机、Linux VM 当工作区，对需要让代理装依赖、跑命令、做测试的人来说，比直接在本机跑多一层边界。性能、兼容性、隔离到底怎么做，原文一句没提。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+Vericto 把检查放在最后一刻之前：在 Postgres 或 MySQL 真正执行之前，先看 AI agent 写出的 SQL，而不是等命令跑完再处理。位置选得对，SQL 一旦执行，回滚就是另一件事了。但检查规则是什么、支持哪些 SQL 写法、误报怎么处理，项目页都没有交代。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+三个项目放一起，恰好构成一条动手前的顺序：拿凭据、进环境、改数据。这条顺序本身就有用，拿它当清单去问自己“我的代理哪一步还没有限制”就够了。但不必把它解读成趋势。三个 Hacker News 帖子分别是 2 分、3 分、3 分，评论都是 0，同日出现完全可能只是发布撞车。既没有使用数据，也没有第三方评估，所以谁都不能说它们真能拦住什么。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+真要追问，问题很具体。1Password：授权给到哪一层，有没有审计记录，团队账户还是个人账户能用。Koala：装起来要几步，和哪些 Mac 环境不对付，虚拟机这层隔离够不够硬。Vericto：拦哪些语句，规则能不能自己改，误杀一条正常 SQL 时谁来负责。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+这三个项目目前都只说明了自己卡在哪一步，还没说明卡住了多少。后续要看的不是各自又更新了什么功能，而是有没有人贴出一次真实的拦截记录，例如一条本该被 Vericto 拦下的 SQL，或者一次被 Koala 关在 VM 里的越界操作。如果没有这类记录，这份清单就只能停在问题阶段。
+</section>
+
+</section>
+</section>
+
+
+</section></div>
+  </article>
+</main>
+<footer class="site-footer"><div class="wrap">由 TrendPublish 生成</div></footer>
+</body>
+</html>
