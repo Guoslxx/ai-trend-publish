@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "同一周，Claude 被要求别帮人克隆游戏，Roblox 晒出 7 万款新游戏",
+      "slug": "2026-10-31-zcwyrz",
+      "date": "2026-10-31",
+      "summary": "Claude 被要求不要帮用户克隆游戏，Roblox 则在同周公布五个月新增 7 万款游戏——一个在收口模型行为，一个在展示生成规模，同一批 AI 生成能力被两个方向处理。对读者最直接的影响是：模型会不会拦住你的请求、平台会不会让你的作品被看见，这两件事的规则都还没公开，只能先盯限制粒度和分层机制。另附一条短评：DeepSeek 开源了自称主要由 agent 构建的 coding agent 原型，但仓库还缺许可证、评测和安装说明，目前只能看思路。",
+      "url": "https://guoslxx.github.io/ai-trend-publish/posts/2026-10-31-zcwyrz.html"
+    },
+    {
       "title": "DeepSeek 开源编程代理原型，仓库说代码主要由代理自己写",
       "slug": "2026-10-31-t3gwod",
       "date": "2026-10-31",
