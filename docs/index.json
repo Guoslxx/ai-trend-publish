@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "AI 代理做 50 道税务题：讨论很热，分数还没公开",
+      "slug": "2026-10-28-1eq4ghp",
+      "date": "2026-10-28",
+      "summary": "新鲜点是 Surge 用 50 个专业税务任务评估 AI 代理，并在 Hacker News 引发讨论；影响对象是关心 AI 代理落地和安全检测的读者；后续变量是评测细节（判分、参与模型、错误成本）以及思科 Project Quarry 能否给出接入方式和误报数据。",
+      "url": "https://guoslxx.github.io/ai-trend-publish/posts/2026-10-28-1eq4ghp.html"
+    },
+    {
       "title": "AI 代理要查生产数据，OIDC、扫描和测试工具先上了",
       "slug": "2026-10-27-y8atu4",
       "date": "2026-10-27",
