@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "DoorDash 说外部 AI Agent 只下了几百单",
+      "slug": "2026-11-02-tho5za",
+      "date": "2026-11-02",
+      "summary": "平台侧第一次给出 Agent 代下单的具体量级：DoorDash 说至今只有数百单，和“Agent 帮你点餐”的宣传反差明显。这条数字对正在排期的产品团队最有用——它说明交易闭环里的 Agent 还停在演示。同一批消息里，LongCat-2.5 把原生多模态对准 Agent 任务，但参数、评测、开源与定价都还没公布；DirectX 更新号称把光追显存占用最多降 90%，同样只有上限没有细节。后续变量是 DoorDash 会不会披露统计口径，以及 LongCat 的模型卡和价格什么时候补齐。",
+      "url": "https://guoslxx.github.io/ai-trend-publish/posts/2026-11-02-tho5za.html"
+    },
+    {
       "title": "DoorDash 说外部 AI 代理只下了数百单",
       "slug": "2026-11-02-kxmnfk",
       "date": "2026-11-02",
