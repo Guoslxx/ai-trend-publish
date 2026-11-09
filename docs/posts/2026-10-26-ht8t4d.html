@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 代理会读你的下载文件夹，Markdown 可能就是指令 · AI 趋势归档</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <p class="site-title"><a href="../index.html">AI 趋势归档</a></p>
+  <nav class="site-nav"><a href="../index.html">全部文章</a></nav>
+</div></header>
+<main class="site-main">
+  <article>
+    <h1 class="post-title">AI 代理会读你的下载文件夹，Markdown 可能就是指令</h1>
+    <p class="post-meta">2026-10-26</p>
+    <div class="wechat-body">
+<section style="
+margin: 0 auto;
+max-width: 100%;
+padding: 18px 16px;
+font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+line-height: 1.75;
+color: #1d2129;
+background: #ffffff;
+">
+
+
+<section style="margin: 40px 0;">
+<section style="
+margin: 0 0 18px;
+padding: 16px 18px;
+background: linear-gradient(90deg, rgba(22,119,255,0.08), rgba(5,212,205,0.03));
+border-left: 4px solid #1677ff;
+border-radius: 12px;
+border-top: 1px solid rgba(22,119,255,0.10);
+border-right: 1px solid rgba(22,119,255,0.10);
+border-bottom: 1px solid rgba(5,212,205,0.10);
+">
+<h3 style="margin:0;color:#1d2129;font-size:22px;font-weight:800;line-height:1.45;">
+下载文件夹成了代理的指令入口
+</h3>
+<p style="margin:8px 0 0;color:#86909c;font-size:13px;line-height:1.4;">
+10 月 26 日
+</p>
+</section>
+<section style="padding:0 2px 0 4px;">
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+安全博客 forever.security 描述了一条攻击路径：把指令写进一个 Markdown 文件，放进下载文件夹，等 AI 代理读到它，然后照做。文章标题把这个说法直接摆出来——Markdown 是新的可执行文件。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+被盯上的是会读取本地下载目录的 AI 助手和自动化工具，尤其是那些自动整理文件、自动总结下载内容的用法。反差就在这里：文件看起来不像程序，打开也只是普通文本，但代理会把它当成任务说明来读。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+需要注意的是证据量级。博客给出的是路径描述，没有公开样本、影响范围或实测数据，所以现在能确定的是入口在哪，不是这种事发生了多少次。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+对已经让代理自动扫下载目录的人来说，可改的一处很具体：把读取范围收窄到指定文件夹，读取前确认来源，别让它无差别处理来源不明的下载文件。这条路径成立的前提，就是代理有权限读到那个目录。
+</section>
+
+</section>
+</section>
+
+<section style="margin:40px auto;width:70%;height:2px;background:linear-gradient(90deg, rgba(22,119,255,0), rgba(22,119,255,0.58), rgba(5,212,205,0.58), rgba(5,212,205,0));font-size:0;line-height:0;">&nbsp;</section>
+
+
+<section style="margin: 40px 0;">
+<section style="
+margin: 0 0 18px;
+padding: 16px 18px;
+background: linear-gradient(90deg, rgba(22,119,255,0.08), rgba(5,212,205,0.03));
+border-left: 4px solid #1677ff;
+border-radius: 12px;
+border-top: 1px solid rgba(22,119,255,0.10);
+border-right: 1px solid rgba(22,119,255,0.10);
+border-bottom: 1px solid rgba(5,212,205,0.10);
+">
+<h3 style="margin:0;color:#1d2129;font-size:22px;font-weight:800;line-height:1.45;">
+多个代理一起动手，事后查不出是谁
+</h3>
+<p style="margin:8px 0 0;color:#86909c;font-size:13px;line-height:1.4;">
+10 月 26 日
+</p>
+</section>
+<section style="padding:0 2px 0 4px;">
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+一篇标题为《Nobody Could Say Which AI Agent Did It》的文章被提交到 Hacker News，标题本身就把问题说完了：当多个 AI 代理在同一个环境里动手，事后没人能说清是哪一个做的。抓取到的正文只有标题和讨论链接，对应讨论帖 2 分、0 条评论，没有形成讨论，也没有案例支撑。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+它指向的是一个很具体的工程缺口，而不是抽象的安全担忧：日志里如果没有代理身份这一维，出问题时只能看到“某个动作被执行了”，还原不到具体代理、具体动作。团队里同时挂着一个改代码的、一个查网页的、一个整理文件的，这个缺口第一次出问题就会撞上。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+单代理的时候这件事不显眼，因为只有一个嫌疑人。多代理并行之后，追责成本才开始变成真金白银——要么事前给每个代理单独的凭据和日志位，要么事后一起承担说不清的代价。原文是否给出了可操作的定位方法，目前无法判断。
+</section>
+
+</section>
+</section>
+
+<section style="margin:40px auto;width:70%;height:2px;background:linear-gradient(90deg, rgba(22,119,255,0), rgba(22,119,255,0.58), rgba(5,212,205,0.58), rgba(5,212,205,0));font-size:0;line-height:0;">&nbsp;</section>
+
+
+<section style="margin: 40px 0;">
+<section style="
+margin: 0 0 18px;
+padding: 16px 18px;
+background: linear-gradient(90deg, rgba(22,119,255,0.08), rgba(5,212,205,0.03));
+border-left: 4px solid #1677ff;
+border-radius: 12px;
+border-top: 1px solid rgba(22,119,255,0.10);
+border-right: 1px solid rgba(22,119,255,0.10);
+border-bottom: 1px solid rgba(5,212,205,0.10);
+">
+<h3 style="margin:0;color:#1d2129;font-size:22px;font-weight:800;line-height:1.45;">
+给代理写的新语言 Jac，目前只有一句话能确认
+</h3>
+<p style="margin:8px 0 0;color:#86909c;font-size:13px;line-height:1.4;">
+10 月 26 日
+</p>
+</section>
+<section style="padding:0 2px 0 4px;">
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+密歇根大学一位教授发布了名为 Jac 的编程语言，定位是给 AI 代理使用，语法接近 Python。这是目前能确认的全部。原始信息只有一句话概括和讨论链接，没有披露语言的具体设计、可用版本或发布时间表，讨论帖同样是 2 分、0 条评论。
+</section>
+
+<section style="margin:0 0 20px;color:#4e5969;font-size:15px;line-height:1.9;text-align:left;letter-spacing:0.02em;">
+不写 AI 代理的人，这条可以直接跳过。正在搭代理的人，现在也没有足够信息判断它到底解决了哪个现有工具解决不了的问题——要等语法文档和代码示例出来。
+</section>
+
+</section>
+</section>
+
+
+</section></div>
+  </article>
+</main>
+<footer class="site-footer"><div class="wrap">由 TrendPublish 生成</div></footer>
+</body>
+</html>
