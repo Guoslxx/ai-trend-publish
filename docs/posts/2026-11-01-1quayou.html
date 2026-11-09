@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Itch.io 每天新建页面翻倍，下载和购买却没涨 · AI 趋势归档</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <p class="site-title"><a href="../index.html">AI 趋势归档</a></p>
+  <nav class="site-nav"><a href="../index.html">全部文章</a></nav>
+</div></header>
+<main class="site-main">
+  <article>
+    <h1 class="post-title">Itch.io 每天新建页面翻倍，下载和购买却没涨</h1>
+    <p class="post-meta">2026-11-01</p>
+    <div class="wechat-body">
+<section style="margin:0 auto;max-width:100%;padding:22px 18px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;color:#222222;background:#ffffff;line-height:1.9;">
+
+
+<section style="margin:42px 0;">
+<h3 style="margin:0 0 10px;color:#111111;font-size:22px;font-weight:800;line-height:1.45;">页面数翻倍、下载没涨：Itch.io 先被内容供给撞了一下</h3>
+<p style="margin:0 0 20px;color:#999999;font-size:13px;line-height:1.4;">11 月 1 日</p>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+据 PC Gamer 报道，Itch.io 过去两个月每日新建游戏页面数量翻倍。同一条报道里另一半数字更关键：下载和购买量没有同步翻倍。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+这两个数字放在一起，不能读成市场变大。新页面翻倍而真实需求没动，意味着同样一款作品要和两倍的低成本页面抢同一个发现入口。对一个三四个人、没有发行商预算、指望平台首页和标签页带来第一波玩家的小团队来说，这就是曝光被稀释。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+报道把这波增长的头号嫌疑指向 AI 批量生成的低质内容。这里要用“嫌疑”，不能写成结论：页面数翻倍也可能来自发布门槛降低、平台活动，或者与 AI 无关的普通垃圾上传；下载和购买没涨，同样可能只是统计窗口内的滞后。目前这条因果链只靠 PC Gamer 单篇报道支撑，Itch.io 官方口径还没出现。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+这个剧本 Steam 上已经演过一轮，Itch.io 现在撞上同一件事。对负责供给治理的人来说，问题很具体：批量上传要不要限速，低质内容按什么标准定义，新页面在推荐和排序里要不要降权。这三件事没有一件是抽象的。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+接下来值得盯的不是页面数还涨不涨，而是 Itch.io 会不会动批量上传规则和新页面分发权重。动了，小团队的自然流量逻辑要重算；不动，找上来的作品只会更多。
+</section>
+
+</section>
+
+<section style="margin:42px 0;height:1px;background:#eeeeee;font-size:0;line-height:0;">&nbsp;</section>
+
+
+<section style="margin:42px 0;">
+<h3 style="margin:0 0 10px;color:#111111;font-size:22px;font-weight:800;line-height:1.45;">两个 2 分帖：Agent 审计记录和调度层，现在只够看仓库代码</h3>
+<p style="margin:0 0 20px;color:#999999;font-size:13px;line-height:1.4;">11 月 1 日</p>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+ZizkaDB 发布文章《如何在几分钟内证明你的 AI Agent 做了什么》，配套两个 GitHub Actions，并上线了 MCP 列表页。它的思路是不另建一套观测服务：Agent 跑完之后，审计记录直接由这两个 Action 生成。对已经把 Agent 跑在 GitHub 流水线上的团队，接入成本可能低一截。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+能确认的到此为止。这两个 Action 具体抓取哪些内容、日志是什么格式，原文没有交代。而这恰好是判断它有没有用的关键：记录的是完整调用链，还是只有最终结果？如果只有最终结果，出问题时依然复现不了过程。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+另一条是 OpenProject Agent Engine，在 Show HN 发布，定位写得很直接：自动化工作流与 Agent 调度。原文能确认的只有一个 GitHub 仓库（310networks/openproject-agent-engine）和作者名。它支持哪些模型、怎么和已有的 OpenProject 实例对接、用什么许可证、怎么部署，全都没写。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+两条帖子目前都只有 2 分、0 条评论。低热度本身不说明东西不行，但说明它们还没进入工程讨论。现在想评估只能直接翻仓库代码；接下来的变量是作者会不会补上示例配置和接入文档，不补，就停在标题比内容更完整的阶段。
+</section>
+
+</section>
+
+
+</section></div>
+  </article>
+</main>
+<footer class="site-footer"><div class="wrap">由 TrendPublish 生成</div></footer>
+</body>
+</html>
