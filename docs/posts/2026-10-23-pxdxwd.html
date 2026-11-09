@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent 安全开始分件：1Password 管凭证，Koala 隔离 VM，Vericto 拦 SQL · AI 趋势归档</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <p class="site-title"><a href="../index.html">AI 趋势归档</a></p>
+  <nav class="site-nav"><a href="../index.html">全部文章</a></nav>
+</div></header>
+<main class="site-main">
+  <article>
+    <h1 class="post-title">Agent 安全开始分件：1Password 管凭证，Koala 隔离 VM，Vericto 拦 SQL</h1>
+    <p class="post-meta">2026-10-23</p>
+    <div class="wechat-body">
+<section style="margin:0 auto;max-width:100%;padding:22px 18px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;color:#222222;background:#ffffff;line-height:1.9;">
+
+
+<section style="margin:42px 0;">
+<h3 style="margin:0 0 10px;color:#111111;font-size:22px;font-weight:800;line-height:1.45;">1Password 把 agent 身份单列，另外两个项目卡在隔离和 SQL 校验</h3>
+<p style="margin:0 0 20px;color:#999999;font-size:13px;line-height:1.4;">10 月 23 日</p>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+1Password 上线了新产品线 1Password for Agents，官方博客以发布公告的形式放出，Hacker News 上已经有了讨论帖。动作本身很直白：过去密码管理器管的是人的账号，现在多了一类服务对象，会自己调工具、自己执行任务的 AI agent。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+能确认的只有这个动作。抓取到的原文只有发布信息和博客入口，权限模型、计费方式、支持哪些 agent 框架都没有展开。开发者真正要看的是两件事：它怎么发放和回收凭证，能不能审计 agent 的每一次取用。这两点没落地，agent 拿着长期 token 到处跑就还是常态。后续变量在文档和定价，如果凭证托管、权限范围、调用日志被做成标准接口，接 agent 的项目就能省掉一层自建密钥管理。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+同一天还有两个低热度项目，卡的位置不一样。Show HN 上的 Koala 由 kunalkushwaha 发布，做法是在 macOS 上启动隔离的 Linux 虚拟机，把 agent 放进 VM 里跑，卖点在执行环境的边界，跟模型无关。做本地 coding agent、或者要处理不可信任务的团队，会关心它装起来难不难、隔离得彻不彻底、资源开销多大。原文没给出性能、支持范围或安全模型，HN 讨论只有 3 分、0 条评论。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+Vericto 以 vericto-proxy 仓库形式发布，定位是代理层：agent 生成的 SQL 先经过它，再交给 Postgres 或 MySQL。这是执行前校验的位置。原文没有给出拦截规则、误判率、延迟开销，也没说它能不能区分读写操作。对打算让 agent 直连生产库的人来说，读写区分恰恰是第一道闸门，这一点没写清楚，剩下的都还谈不上。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+把三个动作按 agent 执行链路排一下：1Password 管身份和凭证，Koala 管执行环境隔离，Vericto 管 SQL 落地前的那一次检查。这就是我认为 agent 安全正在被拆成可单独接入的工程环节的依据，但我只敢说到底层是方向。三个来源都只有发布页或仓库页，文档、定价、权限模型、性能一概没有，热度也谈不上。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+所以最稳妥的用法不是排名，是拿它们当一张检查表：接 agent 的时候，凭证这一层你有没有答案，隔离这一层你有没有答案，写操作前的校验你有没有答案。三个都能答上来，这三件工具就可以先不装；答不上来的那个洞，再去点开对应文档。它们的真实成色，接下来要看谁能先补齐文档和定价，而不是谁先在 HN 上出现。
+</section>
+
+</section>
+
+
+</section></div>
+  </article>
+</main>
+<footer class="site-footer"><div class="wrap">由 TrendPublish 生成</div></footer>
+</body>
+</html>
