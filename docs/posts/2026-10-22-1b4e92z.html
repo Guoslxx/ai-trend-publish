@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>把凯斯勒综合征套到软件上，这次 HN 只给了一个问题 · AI 趋势归档</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <p class="site-title"><a href="../index.html">AI 趋势归档</a></p>
+  <nav class="site-nav"><a href="../index.html">全部文章</a></nav>
+</div></header>
+<main class="site-main">
+  <article>
+    <h1 class="post-title">把凯斯勒综合征套到软件上，这次 HN 只给了一个问题</h1>
+    <p class="post-meta">2026-10-22</p>
+    <div class="wechat-body">
+<section style="margin:0 auto;max-width:100%;padding:22px 18px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;color:#222222;background:#ffffff;line-height:1.9;">
+<section style="margin:0 0 34px;padding-bottom:18px;border-bottom:1px solid #eeeeee;">
+<p style="margin:0 0 8px;color:#999999;font-size:12px;font-weight:700;letter-spacing:0.12em;line-height:1.2;">MINIMAL READING</p>
+<p style="margin:0;color:#111111;font-size:24px;font-weight:800;line-height:1.35;">本期文章</p>
+</section>
+<section style="margin:0 0 34px;">
+
+<p style="margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid #f2f2f2;color:#222222;font-size:14px;font-weight:700;line-height:1.7;">
+<span style="display:inline-block;margin-right:10px;color:#999999;">01</span>碎片不是撞出来的，是被重试和超时喂大的
+</p>
+
+<p style="margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid #f2f2f2;color:#222222;font-size:14px;font-weight:700;line-height:1.7;">
+<span style="display:inline-block;margin-right:10px;color:#999999;">02</span>一条只有标题，一条只有周期
+</p>
+
+</section>
+
+<section style="margin:42px 0;">
+<p style="margin:0 0 10px;color:#999999;font-size:12px;font-weight:700;letter-spacing:0.10em;">ARTICLE 01</p>
+<h3 style="margin:0 0 10px;color:#111111;font-size:22px;font-weight:800;line-height:1.45;">碎片不是撞出来的，是被重试和超时喂大的</h3>
+<p style="margin:0 0 20px;color:#999999;font-size:13px;line-height:1.4;">2026-10-22T00:58:58.000Z</p>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+Hacker News 上有人发了个帖子，标题把凯斯勒综合征搬到了软件系统上。这个概念原本讲的是太空碎片：碰撞产生更多碎片，更多碎片再引发更多碰撞。他想问的是，软件故障会不会也这样成倍繁殖。发帖时 4 分、0 条评论，没有正文论证，只有一个类比。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+先说不好听的那一面：级联失效、retry storm、雪崩，这些词 SRE 讲了十几年，把凯斯勒综合征换上去并不会让熔断器变得更聪明。如果只停在"像不像"，这帖确实不值得点开。变的是语境——服务拆得比过去细得多，外部依赖更多，agent 调用链又把几个服务串成一串，能被撞出来的"碎片"确实比单体时代多。老概念在新拓扑里重新问一遍，问题本身有它的用处。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+摘要转述里点出的四个放大器是重试、超时、队列堆积和上游重放。四个东西的共同特征是：都不消耗异常，而是复制异常。一次局部失败本该到这里为止，结果被重试复制一份、被超时挂住一份、被队列存起来一份、被上游重放再灌回来一份。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+对着自己的系统可以过一遍：失败后的重试有没有上限和退避，还是下游一抖就翻倍加压；超时是不是逐层收敛，还是外层等得比内层还久，把已经放弃的请求继续挂在连接上；队列堆积时是丢任务还是硬扛，积压清空那一刻的回放会不会把下游再打一遍；上游重放和补偿逻辑，是不是把同一批请求重新送进还没恢复的服务。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+还有一层规模变量，这是推断不是帖子给的结论：服务拆得越细、外部依赖越多、agent 调用链越长，链路上可被撞出来的"碎片"就越多。微服务把一次调用变成扇出，agent 把一次任务变成多轮工具调用，两者都在增加局部异常遇上下一个放大器的机会。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+帖子里没回答的是边界：哪些系统必然级联，哪些能靠熔断和隔离兜住。这个分界线比"凯斯勒综合征成不成立"实用得多。它要是给不出来，这个类比就还只是一个比喻；给得出来，才算能拿去对着自己那套调用链比划。
+</section>
+
+</section>
+
+<section style="margin:42px 0;height:1px;background:#eeeeee;font-size:0;line-height:0;">&nbsp;</section>
+
+
+<section style="margin:42px 0;">
+<p style="margin:0 0 10px;color:#999999;font-size:12px;font-weight:700;letter-spacing:0.10em;">ARTICLE 02</p>
+<h3 style="margin:0 0 10px;color:#111111;font-size:22px;font-weight:800;line-height:1.45;">一条只有标题，一条只有周期</h3>
+<p style="margin:0 0 20px;color:#999999;font-size:13px;line-height:1.4;">2026-10-21T23:29:32.000Z</p>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+同日 HN 上挂着一篇 arXiv 新基准 CyberArena，标题说要在实时、对称的攻防对抗里评测 AI 智能体——"对称"指对抗双方条件相同，都要同时承担进攻和防守。它给出的其实是一个评估角度：不看单轮任务能不能做完，看你在持续对抗里会不会露破绽。但除了标题和一句简介，评测环境怎么搭、用了哪些模型、成绩如何，全都没有公开，HN 上 2 分、0 条评论。攻防类基准要站住，先得放出可复现环境和公开榜单，缺这两样，引用它的人不会多。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+另一条更轻。一位开发者发帖自问，是不是刚花了 6 个月做了个没人想要的产品，11 分、13 条评论。原文没说产品是什么、给谁用、中间怎么验证。所以它能当提醒用——先把真实用户信号拿到，再决定押不押半年——但不能当失败率数据读，一条自嘲帖撑不起任何比例。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+三条都还停在很早期：一个类比、一个标题、一个投入周期，全是单一来源、低热度，冷清本身不说明产品好坏。能验证的是另一件事：主帖评论区会不会出现具体拓扑和参数，把"哪些系统必然级联、哪些能靠熔断兜住"这条线画出来。
+</section>
+
+</section>
+
+
+</section></div>
+  </article>
+</main>
+<footer class="site-footer"><div class="wrap">由 TrendPublish 生成</div></footer>
+</body>
+</html>
