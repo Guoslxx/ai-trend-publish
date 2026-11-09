@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "Stripe 说 AI 代理能動錢了，但額度、審批和追責都還沒寫",
+      "slug": "2026-11-06-mn4qbc",
+      "date": "2026-11-06",
+      "summary": "Stripe 博客称 AI 代理可以在 Stripe 里动钱，但接口范围、额度、审批和追责都没写；同一天 HN 上还冒出做 OAuth 委托的 Agentic Identity Broker 和做零信任运行时的 AegisKernel，都只有入口级信息。这篇把三者摆在一起，说清哪些是已确认的动作、哪些还待披露，以及打算交出支付权限的人现在该盯哪几个限制。",
+      "url": "https://guoslxx.github.io/ai-trend-publish/posts/2026-11-06-mn4qbc.html"
+    },
+    {
       "title": "数据中心输在投票箱上，AI 抢内存的成本压力已经摆上任天堂的桌面",
       "slug": "2026-11-05-ru0d0s",
       "date": "2026-11-05",
