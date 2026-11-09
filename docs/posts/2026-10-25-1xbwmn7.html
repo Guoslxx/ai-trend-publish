@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>有人想为 Agent 重写 Excel、Word 和 PowerPoint · AI 趋势归档</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <p class="site-title"><a href="../index.html">AI 趋势归档</a></p>
+  <nav class="site-nav"><a href="../index.html">全部文章</a></nav>
+</div></header>
+<main class="site-main">
+  <article>
+    <h1 class="post-title">有人想为 Agent 重写 Excel、Word 和 PowerPoint</h1>
+    <p class="post-meta">2026-10-25</p>
+    <div class="wechat-body">
+<section style="margin:0 auto;max-width:100%;padding:22px 18px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;color:#222222;background:#ffffff;line-height:1.9;">
+
+
+<section style="margin:42px 0;">
+<h3 style="margin:0 0 10px;color:#111111;font-size:22px;font-weight:800;line-height:1.45;">有人提议为 Agent 重写 Office 三件套，该看的不是模型而是接口</h3>
+<p style="margin:0 0 20px;color:#999999;font-size:13px;line-height:1.4;">10 月 25 日</p>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+Compound 在自家博客提出一个主张：为 Agent 重写 Excel、PowerPoint 和 Word。这条帖子上到 Hacker News 后没有激起讨论，但主张本身指得很具体——这三件套的界面、文件格式和操作路径，全是按人点鼠标的习惯设计的。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+真正要改的地方大概率不在模型，而在接口。文档要不要保留单元格、幻灯片、段落这些人类阅读单位，还是换成 Agent 能直接读写、校验的结构，这个选择直接决定以后接办公软件的方式：继续做 UI 自动化，还是等一套原生 API。这两种接入的工程量与维护成本不是一个量级。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+Zephium 切的是同一类问题的另一半。Show HN 上的这个开源项目把自己定位成“给人类和 Agent 用的浏览器与工作环境”，也就是让人和 Agent 待在同一个浏览器工作区里协作，而不是让 Agent 在浏览器外面模拟点击。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+能核验的信息主要来自它的 GitHub 仓库，具体能力、支持哪些系统、Agent 的权限怎么隔离，都还没有展开。这也是我把它和 Compound 放一起说的原因：两条都在改入口本身，不在现有入口上包一层自动化，但都只走到“仓库定位”和“博客主张”。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+产品团队现在能观察的是形态选择：这类东西最后做成一款插件、一个独立浏览器，还是直接接管工作流。三种形态对应完全不同的权限模型。看到 Agent 原生的文档结构或浏览器侧的原生 API 真正出现，再谈要不要动自己的接入方案，比现在猜结论更有用。
+</section>
+
+</section>
+
+<section style="margin:42px 0;height:1px;background:#eeeeee;font-size:0;line-height:0;">&nbsp;</section>
+
+
+<section style="margin:42px 0;">
+<h3 style="margin:0 0 10px;color:#111111;font-size:22px;font-weight:800;line-height:1.45;">ACID 被搬到工具调用层，方向对，但还缺一个能跑的回滚 demo</h3>
+<p style="margin:0 0 20px;color:#999999;font-size:13px;line-height:1.4;">10 月 25 日</p>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+GitHub 上出现一个叫 Jukebox-OS 的项目，定位写得很直接：为 AI Agent 提供确定性时间旅行重放和 ACID 工具沙箱。翻译成工程问题就两件事——Agent 执行过的工具调用能不能原样重跑一遍，调用失败时能不能像数据库事务那样回滚。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+把 ACID 这个词搬到工具调用层，是目前少见的说法。它对应的痛点是真的：Agent 一旦开始调外部 API、写文件、发请求，“上次为什么这么走”就很难查，已经产生的副作用也不好撤销。做过工作流接入的人应该都在这上面栽过。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+但眼下它只是一个早期仓库。Hacker News 的讨论帖下没有评论，也没有可验证的落地案例和第三方复现，能看的只有设计主张，不是实际能力。
+</section>
+
+<section style="margin:0 0 20px;color:#333333;font-size:15px;line-height:1.95;text-align:left;letter-spacing:0.02em;">
+下面两个变量决定它是一份想法清单还是一个可用组件。一是外部 API 本身就不确定的时候，确定性重放靠什么保证；二是能不能拿出 demo 或基准测试，证明回滚在真实工具调用里确实生效。这两点有答案之前，把它列进选型对比表意义不大，把它列进观察清单是合理的。
+</section>
+
+</section>
+
+
+</section></div>
+  </article>
+</main>
+<footer class="site-footer"><div class="wrap">由 TrendPublish 生成</div></footer>
+</body>
+</html>
