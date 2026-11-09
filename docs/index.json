@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "同一天出现三款 AI 代理护栏：管密码、隔离 VM、拦 SQL",
+      "slug": "2026-10-23-1de0n5b",
+      "date": "2026-10-23",
+      "summary": "同一天，1Password、Koala、Vericto 分别从密码管理、隔离运行环境和 SQL 执行前检查三个环节给 AI 代理加限制。对正在让代理登录账号、跑命令或连数据库的开发者，这是一份具体环节清单；但三款都缺使用数据和关键细节，后续要看授权审计、安装隔离和检查规则是否补上。",
+      "url": "https://guoslxx.github.io/ai-trend-publish/posts/2026-10-23-1de0n5b.html"
+    },
+    {
       "title": "Agent 安全开始分件：1Password 管凭证，Koala 隔离 VM，Vericto 拦 SQL",
       "slug": "2026-10-23-pxdxwd",
       "date": "2026-10-23",
